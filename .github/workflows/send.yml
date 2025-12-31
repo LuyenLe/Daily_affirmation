@@ -1,0 +1,14 @@
+name: Daily Affirmation Sender
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # 09:00 sáng VN (UTC+7)
+  workflow_dispatch:
+
+jobs:
+  call-api:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Netlify Function
+        run: |
+          curl -X POST "YOUR_FUNCTION_URL"
