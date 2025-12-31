@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Call Netlify Function
         run: |
-          curl -X POST "YOUR_FUNCTION_URL"
+          curl -X POST "https://amazing-malasada-2adccd.netlify.app/.netlify/functions/send-affirmation"
